@@ -60,18 +60,18 @@ function Question() {
     <div className="container">
       <div className="askcover">
         <div className="askcover__steps">
-          <h3>Steps to Write a good question</h3>
-          <ul>
-            <li>Summarize in a one-line title</li>
-            <li>Describe in more detail</li>
-            <li>Describe what you expect to happen</li>
-            <li>Review your question and post</li>
+          <h3 className="m-2 font-semibold">Steps to Write a good question</h3>
+          <ul className="m-3">
+            <li>1.Summarize in a one-line title</li>
+            <li>2.Describe in more detail</li>
+            <li>3.Describe what you expect to happen</li>
+            <li>4.Review your question and post</li>
           </ul>
         </div>
         <div className="askcover_question">
-          <div className="askcover_ask">
-            <h3>Ask question</h3>
-            <Link to="/questionList">Go to question page</Link>
+          <div className="askcover_ask m-2">
+            <h3 className="font-semibold">Ask question</h3>
+            <Link to="/" className="text-xs">Go to question page</Link>
           </div>
           <div className="askcover__input">
             <div className="form_container">
@@ -79,13 +79,12 @@ function Question() {
                 <input
                   name="title"
                   type="text"
-                  className="askcover__qtitle"
+                  className="askcover__qtitle p-3 mb-1"
                   placeholder="Title"
                   onChange={handleChange}
                 />
                 <br />
-                <br />
-                <textarea
+                <textarea className="p-3"
                   name="description"
                   placeholder="Question Description"
                   onChange={handleChange}
