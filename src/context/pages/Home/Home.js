@@ -21,7 +21,7 @@ const Home = ({ logout }) => {
       // console.log(">>>>>>>>Home useEffect >> fetchQuestions: 1");
 
       let questions = await axios.get(
-        "http://localhost:4000/api/questions/all"
+        `${process.env.REACT_APP_base_url}/api/questions/all`
       );
       // console.log(">>>>>>>>Home useEffect >> fetchQuestions: 2");
 

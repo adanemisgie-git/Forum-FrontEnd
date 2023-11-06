@@ -39,7 +39,7 @@ function Question() {
       console.log(form);
 
       //sending data to be registered in database
-      await axios.post("http://localhost:4000/api/questions/", {
+      await axios.post(`${process.env.REACT_APP_base_url}/api/questions/`, {
         question: form.title,
         description: form.description,
         user_id: userData.user.id,

@@ -34,11 +34,14 @@ function Answer(props) {
     try {
       // console.log(">>>>> post answer 0");
       console.log(answer);
-      const answerRes = await axios.post("http://localhost:4000/api/Answers/", {
-        answer: answer.answer,
-        questionId: questionId,
-        userId: userdata.user.id,
-      });
+      const answerRes = await axios.post(
+        `${process.env.REACT_APP_base_url}/api/Answers/`,
+        {
+          answer: answer.answer,
+          questionId: questionId,
+          userId: userdata.user.id,
+        }
+      );
       // console.log(">>>>> post answer 1");
       // console.log(">>>>>>>>  your answer is submitted");
       window.location.reload(false);
@@ -56,7 +59,7 @@ function Answer(props) {
     // setAskedQuestion(question);
     const fetchAnswers = async () => {
       const answers = await axios.get(
-        `http://localhost:4000/api/Answers/${questionId}`
+        `${process.env.REACT_APP_base_url}/api/Answers/${questionId}`
       );
       console.log(answers.data);
       console.log(answers.data.data);
